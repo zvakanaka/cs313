@@ -1,0 +1,31 @@
+article
+{
+	width: 950px;
+	display: table;
+}
+
+body
+{
+	color:lime;
+	background-color: #040F1A;
+}
+
+div {
+	text-align: center;
+	color: #A3F785;
+	background-color: #321B6B;
+	width: 500px;
+	border-radius: 8px;
+}
+
+h1 {
+	text-align: center;
+	text-shadow:3px 2px 3px #333333;
+	font-weight:bold;
+	font-size:32px;
+}
+a:link {text-decoration: none; color:lime;}
+a:visited {text-decoration: none; color:lawngreen;}
+a:active {text-decoration: none} 
+a:hover {text-decoration: none; background-color:lime;color:#040F1A}
+
