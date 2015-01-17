@@ -1,11 +1,12 @@
+html {
+    display: table;
+    margin: auto;
+}
 body
 {
-	background-image: url("images/laguna.jpg");
-	background-repeat: repeat-x;
 	background-color: #efefef;
-		float:left;
-			max-width: 1000px;
-	min-width: 1000px;
+	max-width: 1000px;
+	min-width: 300px;
 	border: 2px solid black;
 
 }
@@ -28,6 +29,8 @@ nav
 }
 h1 {
 	background-color: #7073FF;
+	color: #efefef;
+	text-shadow: 1px 1px 3px #111111;
 	font-family: ubuntu, monospace;
 	padding: 15px;
 	margin: 0px auto 0px auto;
