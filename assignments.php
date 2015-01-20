@@ -6,19 +6,17 @@
         <link href="css/tanga.css" type="text/css" rel="stylesheet" media="screen">
   </head>
   <body>
-  <h1>CS313</h1>
-      <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#" class="on">Assignments</a></li>
-        <li><a href="about.html">About Me</a></li>
-      </ul>
-    </nav>
+<?php
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
+include 'header.php'
+?>
     <div>
     <article>
       <h1>Assignments</h1>
     <p>They will be here...</p>
     </article>
+    <?php include 'footer.php' ?>
     </div>
 </body>
 </html>

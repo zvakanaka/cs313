@@ -6,14 +6,12 @@
         <link href="css/tanga.css" type="text/css" rel="stylesheet" media="screen">
   </head>
   <body>
-  <h1>CS313</h1>
-      <nav>
-      <ul>
-        <li><a href="#" class="on">Home</a></li>
-        <li><a href="assignments.html">Assignments</a></li>
-        <li><a href="about.html">About Me</a></li>
-      </ul>
-    </nav>
+<?php
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
+include 'header.php'
+//echo readfile("index.php");
+?>
     <div>
     <article>
   <h1>CS313 - The Best Class at BYU-I</h1>
@@ -21,14 +19,7 @@
   <p>The goal of this page is to teach you to use a terminal.  After years of practice, you can master that command in the image to the left.</p>
 </article>
 <br /><br />
-<footer>
-  <nav>
-    <ul>
-    <li>Contact: Adam Quinton <a href="mailto:qui10001@byui.edu">Email</a> </li>
-      <li><a href="http://www.github.com/zvakanaka">Github</a> </li>  
-    </ul>
-  </nav>
-</footer>
+<?php include 'footer.php' ?>
 </div>
 </body>
 </html>
