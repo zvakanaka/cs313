@@ -1,6 +1,6 @@
 <h1>  
 <?php 
-$navs = array("Home"=>"index.php", "Assignments"=>"assignments.php", "About me"=>"about.php", "Demo"=>"demo.php");
+$navs = array("Home"=>"index.php", "Assignments"=>"assignments.php", "About me"=>"about.php");
   foreach($navs as $KEY => $VAL) {
       if (strcasecmp(ltrim($_SERVER['PHP_SELF'], "/"), $VAL) == 0) {
       	echo "$KEY";
