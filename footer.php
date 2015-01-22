@@ -5,4 +5,7 @@
       <li><a href="http://www.github.com/zvakanaka">Github</a> </li>  
     </ul>
   </nav>
+<?php
+echo "<p>Copyright &copy;" . date("Y") . "</p>";
+?>
 </footer>
