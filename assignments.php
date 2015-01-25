@@ -14,7 +14,7 @@ include 'header.php'
     <div>
     <article>
       <h1>Assignments</h1><br><br>
-      <a href="surveyValidate.php">PHP Survey</a>
+      <a href="surveyValidate.php">Global Warming Survey</a>
     </article>
     <?php include 'footer.php' ?>
     </div>

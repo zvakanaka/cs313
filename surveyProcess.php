@@ -89,7 +89,7 @@ fclose($myfile);
 ?>
 <div>
 <article>
-<h1> Survey Results </h1>
+<h1> Climate Change Survey Results </h1>
 <?php
 $kidStat = number_format((($kid/($kid+$teen+$ya+$adult+$wise))*100), 1);
 $teenStat = number_format((($teen/($kid+$teen+$ya+$adult+$wise))*100), 1);
