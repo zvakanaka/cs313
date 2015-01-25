@@ -61,7 +61,7 @@ $_SESSION["ageErr"] = $_SESSION["threatErr"] = $_SESSION["handErr"] = $_SESSION[
    	   include 'surveyForm.php';
 	   echo "<br><a href=\"surveyProcess.php\">Skip to results</a>";	
 	}
-	else ($_SESSION["quizTaken"]) {
+	else {
 		echo "<p style=\"tect-align:center;\">You have taken the survey.";
 		echo "<br><br><a href=\"surveyProcess.php\">Show results</a></p>";
 	}
