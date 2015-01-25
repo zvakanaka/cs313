@@ -1,11 +1,8 @@
 <footer>
   <nav>
     <ul>
-    <li>Adam Quinton <a href="mailto:qui10001@byui.edu">Email</a> </li>
+    <li>Contact Adam Quinton <a href="mailto:qui10001@byui.edu">Email</a> </li>
       <li><a href="http://www.github.com/zvakanaka">Github</a> </li>  
     </ul>
   </nav>
-<?php
-echo "<p>Copyright &copy;" . date("Y") . "</p>";
-?>
 </footer>
