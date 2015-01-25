@@ -13,8 +13,8 @@ include 'header.php'
 ?>
     <div>
     <article>
-      <h1>Assignments</h1>
-    <p>They will be here...</p>
+      <h1>Assignments</h1><br><br>
+      <a href="demo.php">PHP Survey</a>
     </article>
     <?php include 'footer.php' ?>
     </div>
