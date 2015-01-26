@@ -146,11 +146,11 @@ echo "<dl style=\"width: 300px\">
 <dl style=\"width: 300px\">
 <div class=\"statBox\"><article><h1>Beliefs of Causes</h1>
 <dt>Earth's Natural Cycle</dt>
-<dd><div class=\"bar\" style=\"width: $earthStat%\">$lhandedStat%</div></dd>
+<dd><div class=\"bar\" style=\"width: $earthStat%\">$earthStat%</div></dd>
 <dt>Cattle Flatulance</dt>
-<dd><div class=\"bar\" style=\"width: $fartsStat%\">$rhandedStat%</div></dd>
+<dd><div class=\"bar\" style=\"width: $fartsStat%\">$fartsStat%</div></dd>
 <dt>Industries</dt>
-<dd><div class=\"bar\" style=\"width: $industryStat%\">$lhandedStat%</div></dd>
+<dd><div class=\"bar\" style=\"width: $industryStat%\">$industryStat%</div></dd>
 <dt>Volcanoes</dt>
 <dd><div class=\"bar\" style=\"width: $volcanoeStat%\">$volcanoeStat%</div></dd>
 <dt>Do not believe</dt>
