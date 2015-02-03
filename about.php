@@ -15,7 +15,7 @@ include 'header.php'
      <h2>Greetings</h2>
      <article>
        <img src="images/face.jpg" width="150" alt="My face" />
-       <p>My name is Adam Quinton. I'm currently pursuing a degree in sofware engineering at Brigham Young University - Idaho. I love Linux and writing scripts that makes life easier. Check out my <a href="http://www.github.com/zvakanaka">Github</a>. </p>
+       <p>My name is Adam Quinton. I'm currently pursuing a degree in sofware engineering at Brigham Young University - Idaho. I love Linux and writing scripts that make life easier. </p>
      </article>
      <br /><br />
      <?php include 'footer.php' ?>
