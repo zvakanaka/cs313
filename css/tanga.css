@@ -63,7 +63,7 @@ background-color: #1E4662;
 margin-left: 0px;
 margin-bottom: 0px;
 margin-top: 0px;
-	/*text-align: center;*/
+	text-align: left;
 }
 h1 {
 float: top;	
@@ -74,7 +74,7 @@ background-color: #152A39;
 	font-family: ubuntu, monospace;
 	padding: 15px;
 margin: 0px auto 0px auto;
-	/*text-align: center;*/
+text-align: left;
 }
 li {
 	font-family: ubuntu, monospace;
