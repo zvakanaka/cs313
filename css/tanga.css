@@ -1,6 +1,7 @@
 html {
     display: table;
     margin: auto;
+    background-color: #FFFFFF;
 }
 .bar {
 	margin-bottom: 10px;
@@ -24,7 +25,7 @@ dl {
 }
 body
 {
-	background-color: #efefef;
+	background-color: #F2E9E1;
 	max-width: 1000px;
 	min-width: 300px;
 	border: 1px solid grey;
@@ -32,9 +33,11 @@ body
 }
 aside
 {
-	float:left;
-	width: 75px;
-	border: 2px solid #7073FF;
+	float:right;
+	width: 175px;
+	border: 1px solid grey;
+margin: 15px;
+padding: 15px;
 
 }
 img {
@@ -43,17 +46,34 @@ img {
 }
 nav
 {
-	margin: 0px auto 0px auto;
-
+	/*margin: 0px auto 0px auto;*/
+	padding-top: 1px;
+	padding-bottom: 1px;
+background-color: #35AFB0;
 	text-align: left;
 }
+h2 {
+float: top;	
+background-color: #1E4662;
+	color: #9CF0B9;
+	text-shadow: 1px 1px 3px #111111;
+	font-family: ubuntu, monospace;
+	padding: 10px;
+	/*margin-right: 275px;*/
+margin-left: 0px;
+margin-bottom: 0px;
+margin-top: 0px;
+	/*text-align: center;*/
+}
 h1 {
-	background-color: #7073FF;
+float: top;	
+background-color: #152A39;
 	color: #efefef;
+		color: #9CF0B9;
 	text-shadow: 1px 1px 3px #111111;
 	font-family: ubuntu, monospace;
 	padding: 15px;
-	margin: 0px auto 0px auto;
+margin: 0px auto 0px auto;
 	text-align: center;
 }
 li {
@@ -80,17 +100,20 @@ div {
 }
 article {
 	font-family: liberation, sans-serif;
-	margin: 5px;
-	padding: 4px;
+		font-family: ubuntu, monospace;
+	line-height: 180%; /* 4px +12px + 4px */
+	margin: 0px;
+	padding: 0px;
 
 }
 footer {
 	clear: both;
 	font-size: 80%;
-	padding: 5px;
-	margin: 5px;
 }
 a:hover, a.on {
-	color: #7073FF;
-	background-color: white;
+	color: #152A39;
+	background-color: #CBE86B;
+	background-color: #152A39;
+	color: #9CF0B9;
+	border-radius: 3px;
 }
