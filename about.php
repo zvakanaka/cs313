@@ -12,14 +12,13 @@ error_reporting(E_ALL);
 include 'header.php'
 ?>
    <div>
-    <article>
-  <h1>Greetings</h1>
-  <img src="images/face.jpg" width="150" alt="My face" />
-  <p>Pleased to meet you!  My name is Adam Quinton. I am currently studying sofware engineering at Brigham Young University - Idaho.  
-  I love writing code that makes life easier.  Bash is my favorite tool for this.  Check out <a href="http://www.github.com/zvakanaka">my Github</a>! </p>
-</article>
-<br /><br />
-<?php include 'footer.php' ?>
-</div>
-</body>
+     <h2>Greetings</h2>
+     <article>
+       <img src="images/face.jpg" width="150" alt="My face" />
+       <p>My name is Adam Quinton. I'm currently pursuing a degree in sofware engineering at Brigham Young University - Idaho. I love Linux and writing scripts that makes life easier. Check out my <a href="http://www.github.com/zvakanaka">Github</a>. </p>
+     </article>
+     <br /><br />
+     <?php include 'footer.php' ?>
+   </div>
+  </body>
 </html>

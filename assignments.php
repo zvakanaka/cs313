@@ -12,8 +12,8 @@ error_reporting(E_ALL);
 include 'header.php'
 ?>
     <div>
+      <h2>Assignments</h2>
     <article>
-      <h1>Assignments</h1><br><br>
       <a href="surveyValidate.php">Global Warming Survey</a>
       <a href="assignments/database.php">Database</a>
 

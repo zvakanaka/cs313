@@ -13,8 +13,8 @@ include 'header.php'
 //echo readfile("index.php");
 ?>
     <div>
+  <h2>How to Greet a Terminal</h2>
     <article>
-  <h1>CS313 - The Best Class at BYU-I</h1>
   <img src="images/terminal.png" width="150" alt="Terminal" />
   <p>The goal of this page is to teach you to use a terminal.  After years of practice, you can master that command in the image to the left.</p>
 </article>

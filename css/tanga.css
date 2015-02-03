@@ -74,7 +74,7 @@ background-color: #152A39;
 	font-family: ubuntu, monospace;
 	padding: 15px;
 margin: 0px auto 0px auto;
-	text-align: center;
+	/*text-align: center;*/
 }
 li {
 	font-family: ubuntu, monospace;
@@ -101,7 +101,7 @@ div {
 article {
 	font-family: liberation, sans-serif;
 		font-family: ubuntu, monospace;
-	line-height: 180%; /* 4px +12px + 4px */
+	line-height: 170%; /* 4px +12px + 4px */
 	margin: 0px;
 	padding: 0px;
 
@@ -109,6 +109,7 @@ article {
 footer {
 	clear: both;
 	font-size: 80%;
+text-align: right;
 }
 a:hover, a.on {
 	color: #152A39;
