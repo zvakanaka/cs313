@@ -65,7 +65,7 @@ h2 {
 h1 {
     float: top;	
     background-color: #152A39;
-    color: #efefef;
+    color: #EFEFEF;
     color: #9CF0B9;
     text-shadow: 1px 1px 3px #111111;
     font-family: ubuntu, monospace;
@@ -84,7 +84,7 @@ p {
     margin: 20px auto 20px auto; 
     padding-left: 25px;
     padding-right: 25px;
-    background-color: #efefef;
+    background-color: #F2E9E1;
 }
 a {
     font-family: ubuntu, monospace;
