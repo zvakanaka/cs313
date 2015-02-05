@@ -55,6 +55,7 @@ h2 {
     color: #9CF0B9;
     text-shadow: 1px 1px 3px #111111;
     font-family: ubuntu, monospace;
+    font-family: 'Fira', mono;
     padding: 10px;
     margin-left: 0px;
     margin-bottom: 0px;
@@ -68,6 +69,7 @@ h1 {
     color: #9CF0B9;
     text-shadow: 1px 1px 3px #111111;
     font-family: ubuntu, monospace;
+    font-family: 'Fira', mono;
     padding: 15px;
     margin: 0px auto 0px auto;
     text-align: left;
@@ -86,6 +88,7 @@ p {
 }
 a {
     font-family: ubuntu, monospace;
+    font-family: 'Fira', mono;
     color: black;
     text-transform: uppercase;
     padding: 5px 14px 5px 14px;
@@ -97,7 +100,7 @@ div {
 article {
     font-family: liberation, sans-serif;
     font-family: ubuntu, monospace;
-    line-height: 170%; /* 4px +12px + 4px */
+    line-height: 170%;
     margin: 0px;
     padding: 0px;
     

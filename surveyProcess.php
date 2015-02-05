@@ -169,8 +169,8 @@ echo "<dl style=\"width: 300px\">
   <nav>
     <ul>
     <li><a href="surveyValidate.php">Back to Survey</a></li>
-    <li>Contact: Adam Quinton <a href="mailto:qui10001@byui.edu">Email</a> </li>
-      <li><a href="http://www.github.com/zvakanaka">Github</a> </li>  
+    <li>Contact: Adam Quinton <a href="mailto:qui10001@byui.edu" text="Send me an email">Email</a> </li>
+      <li><a href="http://www.github.com/zvakanaka" title="My projects">Github</a> </li>  
     </ul>
   </nav>
 </footer>

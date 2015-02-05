@@ -3,7 +3,8 @@
   <head>
     <title>Aquinton | Home</title>
     <link rel="favorite icon" type="image/x-icon" href="favicon.ico" />
-        <link href="css/tanga.css" type="text/css" rel="stylesheet" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Jockey+One' rel='stylesheet' type='text/css'>
+    <link href="css/tanga.css" type="text/css" rel="stylesheet" media="screen">
   </head>
   <body>
 <?php
