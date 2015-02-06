@@ -42,10 +42,10 @@ include '../header.php';
   } 
   foreach ($db->query("SELECT song_name, song_composer FROM song") as $row)
   {
-    echo "<h1>Songs</h1> " . $row['song_name'];
-    echo "<h1>Composer</h1> " . $row['song_composer'];
+    echo "<h2>Songs</h2> " . $row['song_name'];
+    echo "<h2>Composer</h2> " . $row['song_composer'];
     echo "<br />";
-    echo "<h1>Chords </h1>";
+    echo "<h2>Chords </h2>";
     foreach ($db->query("SELECT chord_name FROM chord") as $row)
     {
       echo $row['chord_name'];
