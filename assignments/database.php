@@ -3,16 +3,26 @@
   <head>
     <title>Aquinton | Database</title>
     <link rel="favorite icon" type="image/x-icon" href="favicon.ico" />
-        <link href="css/tanga.css" type="text/css" rel="stylesheet" media="screen">
+        <link href="../css/tanga.css" type="text/css" rel="stylesheet" media="screen">
   </head>
   <body>
 <?php
-include 'header.php'; 
+include '../header.php'; 
 ?>
     <div>
     <article>
 <?php
-try
+//$dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST');
+$dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT');
+$dbUser = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+$dbPassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+$openShiftVar = getenv('OPENSHIFT_MYSQL_DB_HOST');
+
+if ($openShiftVar === null || $openShiftVar == "")
+{
+     // Not in the openshift environment
+     $dbHost = "localhost";
+     try
 {
    $user = "php";
    $password = "php-pass";
@@ -23,6 +33,24 @@ catch (PDOException $ex)
    echo "Error!: " . $ex->getMessage();
    die();
 }
+     // …
+}
+else
+{
+     // In the openshift environment
+     $dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST');
+     $dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT');
+     $dbUser = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+     $dbPassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+     echo "host:$dbHost:$dbPort dbName:$dbName user:$dbUser password:$dbPassword<br />\n";
+
+     $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+
+     // …
+} 
+
+//$db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+
 
 foreach ($db->query("SELECT song_name, song_composer FROM song") as $row)
 {
@@ -39,7 +67,7 @@ foreach ($db->query("SELECT chord_name FROM chord") as $row)
 }
 ?>
 </article>
-<?php include 'footer.php' ?>
+<?php include '../footer.php' ?>
 </div>
 </body>
 </html>
