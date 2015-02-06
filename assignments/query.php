@@ -22,7 +22,7 @@ echo "host:$dbHost:$dbPort dbName:$dbName user:$dbUser password:$dbPassword<br /
 
 
 $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-/*
+
 foreach ($db->query("SELECT song_name, song_composer FROM song") as $row)
 {
    echo "<h1>Songs</h1> " . $row['song_name'];
@@ -35,7 +35,7 @@ foreach ($db->query("SELECT chord_name FROM chord") as $row)
    echo $row['chord_name'];
    echo " ";
 }
-*/
+
 ?>
 </article>
 </div>
