@@ -12,7 +12,6 @@ include '../header.php';
     <div>
     <article>
 <?php
-<<<<<<< HEAD
   $openShiftVar = getenv('OPENSHIFT_MYSQL_DB_HOST');
   if ($openShiftVar === null || $openShiftVar == "")
   {
