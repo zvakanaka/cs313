@@ -38,43 +38,6 @@ include '../header.php';
     $dbUser = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
     $dbPassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
     $dbName = "pluckit";
-=======
-$openShiftVar = getenv('OPENSHIFT_MYSQL_DB_HOST');
-if ($openShiftVar === null || $openShiftVar == "")
-{
-     // Not in the openshift environment
-     $dbHost = "localhost";
-     try
-{
-   $user = "php";
-   $password = "php-pass";
-   $db = new PDO("mysql:host=127.0.0.1;dbname=pluckit", $user, $password);
-}
-catch (PDOException $ex)
-{
-   echo "Error!: " . $ex->getMessage();
-   die();
-}
-     // …
-}
-else
-{
-     // In the openshift environment
-     $dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST');
-     $dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT');
-     $dbUser = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
-     $dbPassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
-     $dbName = "pluckit";
-     echo "host:$dbHost:$dbPort dbName:$dbName user:$dbUser password:$dbPassword<br />\n";
-
-     $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-     // …
-} 
-
-//$db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
->>>>>>> 58eb65012ca14d845839bdd2610295c32d53cb43
 
     $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
   } 
