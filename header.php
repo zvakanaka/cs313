@@ -1,6 +1,7 @@
 <h1>  
 <?php 
-$navs = array("Home"=>"index.php", "Assignments"=>"assignments.php", "About me"=>"about.php");
+$navs = array("Home"=>"index.php", "Assignments"=>"assignments/index.php", "About me"=>"about.php");
+//TODO fix assignments tab
 $pageContainedInNavs = false;
   foreach($navs as $KEY => $VAL) {
       if (strcasecmp(ltrim($_SERVER['PHP_SELF'], "/"), $VAL) == 0) {

@@ -5,13 +5,13 @@
 <html>
 <head>
 	<title></title>
-	<link href="css/tanga.css" type="text/css" rel="stylesheet" media="screen">
+	<link href="../../css/tanga.css" type="text/css" rel="stylesheet" media="screen">
 </head>
 <body>
 <?php
-include 'header.php';
+include '../../header.php';
 
-$myfile = fopen("newfile.txt", "r") or die("Unable to open file!");
+$myfile = fopen("results.txt", "r") or die("Unable to open file!");
 $fileKeysVals = explode(',',fgets($myfile));
 
 $countSurveys = 0;

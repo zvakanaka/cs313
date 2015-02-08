@@ -5,11 +5,11 @@
 <html>
 <head>
 	<title></title>
-	<link href="../css/tanga.css" type="text/css" rel="stylesheet" media="screen">
+	<link href="../../css/tanga.css" type="text/css" rel="stylesheet" media="screen">
 </head>
 <body>
 <?php
-	include '../header.php';
+	include '../../header.php';
   $openShiftVar = getenv('OPENSHIFT_MYSQL_DB_HOST');
   if ($openShiftVar === null || $openShiftVar == "")
   {
@@ -84,7 +84,7 @@ if (strcmp($search_type, "song_name") == 0) {
 	
 	}
 } else {
-	echo "<span style='color:red'>ERROR: empty field</span>";
+	echo "<p><span style='color:red'>ERROR: empty field</span></p>";
 }
 
 ?>

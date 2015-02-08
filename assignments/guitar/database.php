@@ -3,11 +3,11 @@
   <head>
     <title>Aquinton | Database</title>
     <link rel="favorite icon" type="image/x-icon" href="favicon.ico" />
-        <link href="../css/tanga.css" type="text/css" rel="stylesheet" media="screen">
+        <link href="../../css/tanga.css" type="text/css" rel="stylesheet" media="screen">
   </head>
   <body>
 <?php
-include '../header.php'; 
+include '../../header.php'; 
 ?>
     <div>
     <article>
@@ -53,13 +53,14 @@ include '../header.php';
   </form>
   </article>
 <?php
-  echo "<h2>All Songs</h2> "; 
+  echo "<h2>All Songs</h2><p>"; 
   foreach ($db->query("SELECT song_name, song_composer FROM song") as $row)
   {
-    echo $row['song_name'] . "<br>";
+    echo $row['song_name'] . " <b>- " . $row['song_composer'] . "</b><br>";
   }
+  echo "</p>";
   ?>
-  <?php include '../footer.php' ?>
+  <?php include '../../footer.php' ?>
 </div>
 </body>
 </html>

@@ -5,10 +5,10 @@ $_SESSION["ageErr"] = $_SESSION["threatErr"] = $_SESSION["handErr"] = $_SESSION[
 <!DOCTYPE html>
 <html>
 <head></head>
-<link href="css/tanga.css" type="text/css" rel="stylesheet" media="screen">
+<link href="../../css/tanga.css" type="text/css" rel="stylesheet" media="screen">
 <body>
 	<?php
-	include 'header.php';
+	include '../../header.php';
 
 	if (!isset($_SESSION["quizTaken"]) || $_SESSION["quizTaken"] == false) {
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -46,7 +46,7 @@ $_SESSION["ageErr"] = $_SESSION["threatErr"] = $_SESSION["handErr"] = $_SESSION[
 				$comment = $_POST["comment"];
 			}
 			if ($_SESSION["ageErr"] == "" && $_SESSION["threatErr"] == "" && $_SESSION["handErr"] == "" && $_SESSION["climateErr"] == "") {
-				$myfile = fopen("newfile.txt", "a") or die("Unable to open file!");
+				$myfile = fopen("results.txt", "a") or die("Unable to open file!");
 				$_SESSION["quizTaken"] = true;
 				$txt = "age=$age,rhanded=$rhanded,lhanded=$lhanded,climate=$climate,threat=$threat,";
 				fwrite($myfile, $txt);
@@ -63,7 +63,7 @@ $_SESSION["ageErr"] = $_SESSION["threatErr"] = $_SESSION["handErr"] = $_SESSION[
 		echo "<p style=\"tect-align:center;\">You have taken the survey.";
 		echo "<br><br><a href=\"surveyProcess.php\">Show results</a></p>";
 	}
-	include 'footer.php';
+	include '../../footer.php';
 	?>
 
 </body>
