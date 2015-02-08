@@ -1,0 +1,4 @@
+#ignore hiden files
+*~
+#keep from wiping out survey
+assignments/survey/results.txt
