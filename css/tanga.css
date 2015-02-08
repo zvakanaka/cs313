@@ -8,7 +8,7 @@ html {
     color: white;
     padding: 4px;
     text-align: left;
-    background-color: #7073FF;
+    background-color: #35AFB0;
     border-radius: 2px;
     text-shadow: 1px 1px 3px #000000;
 }
@@ -49,19 +49,6 @@ nav
     padding-bottom: 1px;
     background-color: #35AFB0;
 }
-h2 {
-    float: top;	
-    background-color: #1E4662;
-    color: #9CF0B9;
-    text-shadow: 1px 1px 3px #111111;
-    font-family: ubuntu, monospace;
-    font-family: 'Fira', mono;
-    padding: 10px;
-    margin-left: 0px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    text-align: left;
-}
 h1 {
     float: top;	
     background-color: #152A39;
@@ -73,6 +60,37 @@ h1 {
     padding: 15px;
     margin: 0px auto 0px auto;
     text-align: left;
+    font-size: 22px;
+}
+h2 {
+    float: top; 
+    background-color: #1E4662;
+    color: #9CF0B9;
+    text-shadow: 1px 1px 3px #111111;
+    font-family: ubuntu, monospace;
+    font-family: 'Fira', mono;
+    padding: 5px;
+    padding-left: 15px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: left;
+    font-size: 18px;
+}
+h3 {
+    float: top; 
+    background-color: #266D99;
+    color: #9CF0B9;
+    text-shadow: 1px 1px 3px #111111;
+    font-family: ubuntu, monospace;
+    font-family: 'Fira', mono;
+    padding: 2px;
+    padding-left: 15px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: left;
+    font-size: 16px;
 }
 li {
     font-family: ubuntu, monospace;
@@ -81,9 +99,10 @@ li {
 }
 p {
     text-align: left;
-    margin: 20px auto 20px auto; 
-    padding-left: 25px;
-    padding-right: 25px;
+    margin: 5px auto 5px auto;
+    padding: 0px; 
+    padding-left: 15px;
+    padding-right: 15px;
     background-color: #F2E9E1;
 }
 a {
@@ -102,8 +121,7 @@ article {
     font-family: ubuntu, monospace;
     line-height: 170%;
     margin: 0px;
-    padding: 0px;
-    
+    padding: 0px;    
 }
 footer {
     clear: both;
