@@ -40,42 +40,26 @@ include '../header.php';
 
     $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
   }
-  echo "<h2>Songs</h2> "; 
+?>
+  <h3>Search</h3>
+   <form action="searchdb.php" method="POST">
+   <input type="text" name="pluckit_search_term" />
+   <select name="search_type">
+    <option value="song_name">Song</option>
+    <option value="composer_name">Composer</option>
+    <option value="chord_name">Chord</option>
+  </select>
+  <input type="submit" name="submit" value="Search" />
+  </form>
+  </article>
+<?php
+  echo "<h2>All Songs</h2> "; 
   foreach ($db->query("SELECT song_name, song_composer FROM song") as $row)
   {
     echo $row['song_name'] . "<br>";
   }
-
-function formulate() {
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    foreach ($db->query("SELECT song_name, song_composer FROM song") as $row)
-    {
-      echo "<h2>Songs</h2> " . $row['song_name'];
-      echo "<h2>Composer</h2> " . $row['song_composer'];
-      echo "<br />";
-      echo "<h2>Chords </h2>";
-      foreach ($db->query("SELECT chord_name FROM chord") as $row)
-      {
-        echo $row['chord_name'];
-        echo " ";
-      }
-      echo "<p> That was a Song</p>";
-    }
-  }
-}
-
-?>
-  <h2>Query</h2>
-  <form action="searchdb.php" method="POST">
-   Search: <input type="text" name="pluckit_search_term" /><br />
-   <input type="submit" name="submit" value="Submit" />
-   </form>
- </td>
-</tr>
-</table>
-</form>
-</article>
-<?php include '../footer.php' ?>
+  ?>
+  <?php include '../footer.php' ?>
 </div>
 </body>
 </html>

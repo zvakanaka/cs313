@@ -8,8 +8,6 @@ $_SESSION["ageErr"] = $_SESSION["threatErr"] = $_SESSION["handErr"] = $_SESSION[
 <link href="css/tanga.css" type="text/css" rel="stylesheet" media="screen">
 <body>
 	<?php
-	ini_set('display_errors', 'On');
-	error_reporting(E_ALL);
 	include 'header.php';
 
 	if (!isset($_SESSION["quizTaken"]) || $_SESSION["quizTaken"] == false) {

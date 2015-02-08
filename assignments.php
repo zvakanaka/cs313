@@ -8,15 +8,16 @@
   </head>
   <body>
 <?php
-ini_set('display_errors', 'On');
-error_reporting(E_ALL);
 include 'header.php'
 ?>
     <div>
       <h2>Assignments</h2>
     <article>
-      <a href="surveyValidate.php" title="Start taking the survey">Global Warming Survey</a>
-      <a href="assignments/database.php" title="MySQL querying test">Database</a>
+    <h3>Global Warming Survey</h3>
+      <a href="surveyValidate.php" title="Start taking the survey">Take the Survey</a>
+      <a href="surveyProcess.php" title="Reults of Global Warming Survey">Skip to Results</a>
+      <h3>Guitar Database</h3>
+      <a href="assignments/database.php" title="MySQL querying test">Search Database</a>
 
     </article>
     <?php include 'footer.php' ?>
