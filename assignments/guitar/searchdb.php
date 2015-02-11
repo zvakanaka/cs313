@@ -83,28 +83,17 @@ if (strcmp($search_type, "song_name") == 0) {
     //turn strings into split number array
     //
     $chars = str_split( $row['strings'], 1 );
-
-    $i = 0;
-    foreach ( $chars as $char )
-    {
-      $strings[$i] = $char;
-//      echo "{$char}<br />\n";
-      $i++;
-    } 
 	}
-  if ($i > 0) {
-   drawChord($strings[0], $strings[1], $strings[2], $strings[3], $strings[4], $strings[5]);
-  }
-  if ($i > 0) {
-   drawChord($strings[0], $strings[1], $strings[2], $strings[3], $strings[4], $strings[5]);
+  if (!empty($chars)) {
+   drawChord($chars[0], $chars[1], $chars[2], $chars[3], $chars[4], $chars[5]);
+   echo "<img src=\"tab.png\" alt=\"After Image Magicked Picture\" title=\"edited\"/>";
   }
 	}
 } else {
 	echo "<p><span style='color:red'>ERROR: empty field</span></p>";
 }
-
 ?>
-<img src="tab.png" alt="After Image Magicked Picture" title="edited"/>
+
 </article>
 <footer>
   <nav>
