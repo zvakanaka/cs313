@@ -83,10 +83,8 @@ if (strcmp($search_type, "song_name") == 0) {
     //turn strings into split number array
     //
     $chars = str_split( $row['strings'], 1 );
-    // or, use this instead if the previous line to weed out spaces, if any
-    // $chars = preg_split( '//', $string, -1, PREG_SPLIT_NO_EMPTY );
 
-$i = 0;
+    $i = 0;
     foreach ( $chars as $char )
     {
       $strings[$i] = $char;
@@ -94,6 +92,9 @@ $i = 0;
       $i++;
     } 
 	}
+  if ($i > 0) {
+   drawChord($strings[0], $strings[1], $strings[2], $strings[3], $strings[4], $strings[5]);
+  }
   if ($i > 0) {
    drawChord($strings[0], $strings[1], $strings[2], $strings[3], $strings[4], $strings[5]);
   }
