@@ -18,7 +18,8 @@ include '../header.php'
       <a href="survey/surveyProcess.php" title="Reults of Global Warming Survey">Skip to Results</a>
       <h3>Guitar Database</h3>
       <a href="guitar/database.php" title="MySQL querying test">Search Database</a>
-
+      <h3>Testing</h3>
+      <a href="<?php include 'testing/info.php';?>" title="phpinfo()">Info</a>
     </article>
     <?php include '../footer.php' ?>
     </div>
