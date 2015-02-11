@@ -94,7 +94,9 @@ $i = 0;
       $i++;
     } 
 	}
-	drawChord($strings[0], $strings[1], $strings[2], $strings[3], $strings[4], $strings[5]);
+  if ($i > 0) {
+   drawChord($strings[0], $strings[1], $strings[2], $strings[3], $strings[4], $strings[5]);
+  }
 	}
 } else {
 	echo "<p><span style='color:red'>ERROR: empty field</span></p>";
