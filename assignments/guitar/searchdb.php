@@ -86,7 +86,7 @@ if (strcmp($search_type, "song_name") == 0) {
 	}
   if (!empty($chars)) {
    drawChord($chars[0], $chars[1], $chars[2], $chars[3], $chars[4], $chars[5]);
-   echo "<img src=\"tab.png\" alt=\"After Image Magicked Picture\" title=\"edited\"/>";
+   echo "<img src=\"tab.gif\" alt=\"After Image Magicked Picture\" title=\"edited\"/>";
   } else {
 echo "<p><span style='color:red'>No Results: try searching for F, A, or C</span></p>";
   }

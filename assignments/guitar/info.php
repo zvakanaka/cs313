@@ -36,7 +36,7 @@ function drawChord($one, $two, $three, $four, $five, $six) {
     //add border
     $imagick = new Imagick();
     $imagick->newImage($maxX, $maxY, $backgroundColor);
-    $imagick->setImageFormat("png");
+    $imagick->setImageFormat("gif");
     $imagick->borderImage('gray', 5, 5);
     $imagick->drawImage($draw);
     //DONE WITH FRETBOARD
@@ -51,7 +51,7 @@ function drawChord($one, $two, $three, $four, $five, $six) {
         }
     }
    $imagick->drawImage($draw);
-   $imagick->writeImage('tab.png');
+   $imagick->writeImage('tab.gif');
 }
 ?>
 <html>
