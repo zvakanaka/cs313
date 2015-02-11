@@ -10,6 +10,7 @@
 <body>
 <?php
 	include '../../header.php';
+  include 'info.php';
   $openShiftVar = getenv('OPENSHIFT_MYSQL_DB_HOST');
   if ($openShiftVar === null || $openShiftVar == "")
   {
@@ -45,7 +46,6 @@
 
   }
 ?>
-<div>
 <article>
 <h1> Search Results </h1>
 <?php
@@ -80,16 +80,29 @@ if (strcmp($search_type, "song_name") == 0) {
 	foreach ($db->query("SELECT chord_name, strings FROM chord WHERE chord_name LIKE '%$term%'") as $row) {
 		echo "<h3>" . $row['chord_name'] . "</h3>";
 		echo "Finger Placement: " .  $row['strings'];
+    //turn strings into split number array
+    //
+    $chars = str_split( $row['strings'], 1 );
+    // or, use this instead if the previous line to weed out spaces, if any
+    // $chars = preg_split( '//', $string, -1, PREG_SPLIT_NO_EMPTY );
+
+$i = 0;
+    foreach ( $chars as $char )
+    {
+      $strings[$i] = $char;
+//      echo "{$char}<br />\n";
+      $i++;
+    } 
 	}
-	
+	drawChord($strings[0], $strings[1], $strings[2], $strings[3], $strings[4], $strings[5]);
 	}
 } else {
 	echo "<p><span style='color:red'>ERROR: empty field</span></p>";
 }
 
 ?>
+<img src="tab.png" alt="After Image Magicked Picture" title="edited"/>
 </article>
-</div>
 <footer>
   <nav>
     <ul>

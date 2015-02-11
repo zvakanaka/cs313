@@ -53,10 +53,9 @@ function drawChord($one, $two, $three, $four, $five, $six) {
    $imagick->drawImage($draw);
    $imagick->writeImage('tab.png');
 }
-drawChord(1, 4, 4, 3, 2, 1);
 ?>
 <html>
 <body>
-	<img src="tab.png" alt="After Image Magicked Picture" title="edited"/>
+	<!-- <img src="tab.png" alt="After Image Magicked Picture" title="edited"/> -->
 </body>
 </html>
