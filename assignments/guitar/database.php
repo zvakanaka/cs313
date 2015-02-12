@@ -45,9 +45,9 @@ include '../../header.php';
    <form action="searchdb.php" method="POST">
    <input type="text" name="pluckit_search_term" />
    <select name="search_type">
+   <option value="chord_name">Chord</option>
     <option value="song_name">Song</option>
     <option value="composer_name">Composer</option>
-    <option value="chord_name">Chord</option>
   </select>
   <input type="submit" name="submit" value="Search" />
   </form>
