@@ -80,13 +80,13 @@ if (!(strcmp($_POST["pluckit_search_term"], "") == 0)) {
   $chords = 0;
 	foreach ($db->query("SELECT chord_name, strings FROM chord WHERE chord_name LIKE '$term%'") as $row) {
 		$chords++;
-    echo "<div id=\"chordbox\"><h3>" . $row['chord_name'] . "</h3>";
+    echo "<div id=\"chord_box\"><h3>" . $row['chord_name'] . "</h3>";
     //turn strings into split number array
     $chars = str_split( $row['strings'], 1 );
     if (!empty($chars)) {
       //echo "Finger Placement: " .  $row['strings'];
      drawChord($chars[0], $chars[1], $chars[2], $chars[3], $chars[4], $chars[5], "tab{$chords}.gif");
-     echo "<img src=\"tab{$chords}.gif\" style=\"max-width:20%\" alt=\"After Image Magicked Picture\" title=\"edited\"/>";
+     echo "<img src=\"tab{$chords}.gif\" style=\"width:100px\" alt=\"After Image Magicked Picture\" title=\"edited\"/>";
    } else {
     echo "<p><span style='color:red'>No Results: try searching for F, A, or C</span></p>";
   }
@@ -98,7 +98,6 @@ if (!(strcmp($_POST["pluckit_search_term"], "") == 0)) {
 	echo "<p><span style='color:red'>ERROR: empty field</span></p>";
 }
 ?>
-
 </article>
 <footer>
   <nav>

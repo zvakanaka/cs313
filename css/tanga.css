@@ -16,8 +16,14 @@ html {
 .error {
     color: #FF0000;
 }
-#chordbox {
+#chord_box {
     float: left;
+    min-width: 100px;
+    margin: 3px;
+    padding: 3px;
+}
+#chord_box h3 {
+    border-radius: 5px;
 }
 
 dl {
@@ -117,7 +123,6 @@ a {
     text-decoration: none;
 }
 div {
-    
 }
 article {
     font-family: liberation, sans-serif;
