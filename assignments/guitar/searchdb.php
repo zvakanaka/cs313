@@ -50,47 +50,50 @@
 <h1> Search Results </h1>
 <?php
 if (!(strcmp($_POST["pluckit_search_term"], "") == 0)) {
-$search_type = $_POST["search_type"];
-if (strcmp($search_type, "song_name") == 0) {
-	foreach ($db->query("SELECT song_name, song_composer FROM song WHERE song_name LIKE '%$term%'") as $row) {
-		echo "<h2>" . $row['song_name'] . "</h2>";
-		echo "<h3>by " . $row['song_composer'] . "</h3>";
-		echo "<p>Chords: ";
-		foreach ($db->query("SELECT chord_name FROM chord") as $row)
-		{
-			echo $row['chord_name'];
-			echo " ";
-		}
-		echo "</p>";
-	}
+  $search_type = $_POST["search_type"];
+  if (strcmp($search_type, "song_name") == 0) {
+   foreach ($db->query("SELECT song_name, song_composer FROM song WHERE song_name LIKE '%$term%'") as $row) {
+    echo "<h2>" . $row['song_name'] . "</h2>";
+    echo "<h3>by " . $row['song_composer'] . "</h3>";
+    echo "<p>Chords: ";
+    foreach ($db->query("SELECT chord_name FROM chord") as $row)
+    {
+     echo $row['chord_name'];
+     echo " ";
+   }
+   echo "</p>";
+ }
 } else if (strcmp($search_type, "composer_name") == 0) {
-		foreach ($db->query("SELECT song_name, song_composer FROM song WHERE song_composer LIKE '%$term%'") as $row) {
-		echo "<h2>" . $row['song_name'] . "</h2>";
-		echo "<h3>by " . $row['song_composer'] . "</h3>";
-		echo "<p>Chords: ";
-		foreach ($db->query("SELECT chord_name FROM chord") as $row)
-		{
-			echo $row['chord_name'];
-			echo " ";
-		}
-		echo "</p>";
-	}
+  foreach ($db->query("SELECT song_name, song_composer FROM song WHERE song_composer LIKE '%$term%'") as $row) {
+    echo "<h2>" . $row['song_name'] . "</h2>";
+    echo "<h3>by " . $row['song_composer'] . "</h3>";
+    echo "<p>Chords: ";
+    foreach ($db->query("SELECT chord_name FROM chord") as $row)
+    {
+     echo $row['chord_name'];
+     echo " ";
+   }
+   echo "</p>";
+ }
 } else if (strcmp($search_type, "chord_name") == 0) {
 	echo "<h2>Chords</h2>";
-	foreach ($db->query("SELECT chord_name, strings FROM chord WHERE chord_name LIKE '%$term%'") as $row) {
-		echo "<h3>" . $row['chord_name'] . "</h3>";
-		echo "Finger Placement: " .  $row['strings'];
+  $chords = 0;
+	foreach ($db->query("SELECT chord_name, strings FROM chord WHERE chord_name LIKE '$term%'") as $row) {
+		$chords++;
+    echo "<div id=\"chordbox\"><h3>" . $row['chord_name'] . "</h3>";
     //turn strings into split number array
-    //
     $chars = str_split( $row['strings'], 1 );
-	}
-  if (!empty($chars)) {
-   drawChord($chars[0], $chars[1], $chars[2], $chars[3], $chars[4], $chars[5]);
-   echo "<img src=\"tab.gif\" alt=\"After Image Magicked Picture\" title=\"edited\"/>";
-  } else {
-echo "<p><span style='color:red'>No Results: try searching for F, A, or C</span></p>";
+    if (!empty($chars)) {
+      //echo "Finger Placement: " .  $row['strings'];
+     drawChord($chars[0], $chars[1], $chars[2], $chars[3], $chars[4], $chars[5], "tab{$chords}.gif");
+     echo "<img src=\"tab{$chords}.gif\" style=\"max-width:20%\" alt=\"After Image Magicked Picture\" title=\"edited\"/>";
+   } else {
+    echo "<p><span style='color:red'>No Results: try searching for F, A, or C</span></p>";
   }
-	}
+  echo "</div>";
+}
+
+}
 } else {
 	echo "<p><span style='color:red'>ERROR: empty field</span></p>";
 }

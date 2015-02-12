@@ -11,7 +11,7 @@ function getChordY($stringNum, $fretSpacing) {
         return $originY;
     }
 }
-function drawChord($one, $two, $three, $four, $five, $six) {
+function drawChord($one, $two, $three, $four, $five, $six, $outFile) {
     $strings = array($one, $two, $three, $four, $five, $six);
     $strokeColor = 'black'; 
     $backgroundColor = 'white';
@@ -51,7 +51,7 @@ function drawChord($one, $two, $three, $four, $five, $six) {
         }
     }
    $imagick->drawImage($draw);
-   $imagick->writeImage('tab.gif');
+   $imagick->writeImage($outFile);
 }
 ?>
 <html>

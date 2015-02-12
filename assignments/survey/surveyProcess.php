@@ -111,6 +111,7 @@ $threat1Stat = number_format((($threat1/($threat1+$threat2+$threat3))*100), 1);
 $threat2Stat = number_format((($threat2/($threat1+$threat2+$threat3))*100), 1);
 $threat3Stat = number_format((($threat3/($threat1+$threat2+$threat3))*100), 1);
 
+//TODO: use a <meter> for the graphs?
 echo "<dl style=\"width: 300px\">
 <div class=\"statBox\"><article><h1>Age Range</h1>
 <dt>Kids (0-12)</dt>

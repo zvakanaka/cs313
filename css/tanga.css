@@ -16,6 +16,9 @@ html {
 .error {
     color: #FF0000;
 }
+#chordbox {
+    float: left;
+}
 
 dl {
     font-size: 75%;
