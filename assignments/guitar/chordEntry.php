@@ -31,68 +31,11 @@
 	<input type="range" min="0" max="5" value="0" step="1" onchange="showValue6(this.value)" name="string6" />
 	<span id="range6">0</span>
 <br>
+	<br><br>	<br><br>
 	<input type="text" id="chord_name" name="chord_name"></input>
+
 	<label for="chord_name">Chord Name</label>
-	<br /><br />
-
-	<input type="text" id="txtChapter" name="txtChapter"></input>
-	<label for="txtChapter">Chapter</label>
-	<br /><br />
-
-	<input type="text" id="txtVerse" name="txtVerse"></input>
-	<label for="txtVerse">Verse</label>
-	<br /><br />
-
-	<label for="chord_name">Chord Name:</label><br />
-	<textarea id="chord_name" name="chord_name" rows="1" cols="50"></textarea>
-	<br /><br />
-
-	<label>Topics:</label><br />
-
-<?php
-// This section will now generate the available check boxes for topics
-// based on what is in the database
-
-
-// It would be better to store these in a different file
-$dbUser = 'php';
-$dbPass = 'php-pass';
-$dbName = 'pluckit';
-$dbHost = '127.0.0.1'; // for my configuration, I need this rather than 'localhost'
-
-try
-{
-	// Create the PDO connection
-	$db = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPass);
-
-	// prepare the statement
-	$statement = $db->prepare('SELECT id, name FROM topic');
-	$statement->execute();
-
-	// Go through each result
-	while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-	{
-		echo '<input type="checkbox" name="chkTopics[]" value="' . $row["id"] . '">';
-		echo $row['name'];
-		echo '</input><br />';
-
-		// put a newline out there just to make our "view source" experience better
-		echo "\n";
-	}
-
-}
-catch (PDOException $ex)
-{
-	// Please be aware that you don't want to output the Exception message in
-	// a production environment
-	echo "Error connecting to DB. Details: $ex";
-	die();
-}
-
-?>
-
-	<br />
-
+	<br>
 	<input type="submit" value="Add to Database" />
 	</form>
 	<footer>
