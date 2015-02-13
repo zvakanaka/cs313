@@ -21,8 +21,8 @@
 <?php
 
 // It would be better to store these in a different file
-$dbUser = 'ta4User';
-$dbPass = 'ta4pass';
+$dbUser = 'php';
+$dbPass = 'php-pass';
 $dbName = 'teamActivity4';
 $dbHost = '127.0.0.1'; // for my configuration, I need this rather than 'localhost'
 

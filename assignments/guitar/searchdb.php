@@ -1,10 +1,7 @@
-<?php 
-	session_start();
-?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Search | Guitar</title>
 	<link href="../../css/tanga.css" type="text/css" rel="stylesheet" media="screen">
 </head>
 <body>
