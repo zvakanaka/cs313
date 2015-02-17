@@ -17,10 +17,12 @@ include '../header.php'
       <a href="survey/surveyValidate.php" title="Start taking the survey">Take the Survey</a>
       <a href="survey/surveyProcess.php" title="Reults of Global Warming Survey">Skip to Results</a>
       <h3>Guitar Database</h3>
-      <a href="guitar/database.php" title="MySQL querying test">Search</a>
-      <a href="guitar/chordEntry.php" title="MySQL insert test">Add Chords</a>
+      <a href="guitar/database.php" title="Search Guitar Database">Search</a>
+      <a href="guitar/show_chords.php" title="Browse Chords in Guitar Database">Browse</a>  
+      <a href="guitar/chordEntry.php" title="Create Guitar Chords in Database">Create</a>
+      <a href="guitar/show_chords.php" title="Delete Guitar Chords in Database"> Delete</a>
       <h3>Testing</h3>
-      <a href="testing/info.php" title="phpinfo()">Info</a>
+      <a href="testing/info.php" title="Could be the upcoming assignment's workspace">Latest Test</a>
     </article>
     <?php include '../footer.php' ?>
     </div>

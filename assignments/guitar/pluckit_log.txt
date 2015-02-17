@@ -1,0 +1,232 @@
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+Query OK, 1 row affected (0.00 sec)
+
+Database changed
++------------+
+| Drop Table |
++------------+
+| SONG       |
++------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.03 sec)
+
+Query OK, 1 row affected (0.00 sec)
+
+Database changed
++------------+
+| Drop Table |
++------------+
+| SONG       |
++------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
++--------------+
+| Create Table |
++--------------+
+| SONG         |
++--------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.03 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
++------------+
+| Drop Table |
++------------+
+| CHORD      |
++------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
++--------------+
+| Create Table |
++--------------+
+| chord        |
++--------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.03 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
++-------------+
+| INSERT INTO |
++-------------+
+| chord       |
++-------------+
+1 row in set (0.00 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
++-------------+
+| INSERT INTO |
++-------------+
+| chord       |
++-------------+
+1 row in set (0.00 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
++-------------+
+| INSERT INTO |
++-------------+
+| chord       |
++-------------+
+1 row in set (0.00 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
++-------------+
+| INSERT INTO |
++-------------+
+| chord       |
++-------------+
+1 row in set (0.00 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
++-------------+
+| INSERT INTO |
++-------------+
+| chord       |
++-------------+
+1 row in set (0.00 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
++-------------+
+| INSERT INTO |
++-------------+
+| chord       |
++-------------+
+1 row in set (0.00 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
++-------------+
+| INSERT INTO |
++-------------+
+| chord       |
++-------------+
+1 row in set (0.00 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
++-------------+
+| INSERT INTO |
++-------------+
+| chord       |
++-------------+
+1 row in set (0.00 sec)
+
++------------+
+| Drop Table |
++------------+
+| left_hand  |
++------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
++--------------+
+| Create Table |
++--------------+
+| left_hand    |
++--------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
++-------------+
+| INSERT INTO |
++-------------+
+| left hand   |
++-------------+
+1 row in set (0.00 sec)
+
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
++------------+
+| Drop Table |
++------------+
+| right_hand |
++------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
++--------------+
+| Create Table |
++--------------+
+| right_hand   |
++--------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.02 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
++------------+
+| Drop Table |
++------------+
+| lookup     |
++------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
++--------------+
+| Create Table |
++--------------+
+| lookup       |
++--------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.04 sec)
+
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`pluckit`.`lookup`, CONSTRAINT `lookup_fk2` FOREIGN KEY (`left_hand_id`) REFERENCES `left_hand` (`left_hand_id`))
++---------------+------------------+------+-----+---------+----------------+
+| Field         | Type             | Null | Key | Default | Extra          |
++---------------+------------------+------+-----+---------+----------------+
+| song_id       | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| song_name     | varchar(100)     | NO   |     | NULL    |                |
+| song_composer | varchar(100)     | NO   |     | NULL    |                |
+| creation_date | date             | NO   |     | NULL    |                |
++---------------+------------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
++---------------+------------------+------+-----+---------+----------------+
+| Field         | Type             | Null | Key | Default | Extra          |
++---------------+------------------+------+-----+---------+----------------+
+| chord_id      | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| chord_name    | varchar(20)      | NO   |     | NULL    |                |
+| strings       | varchar(6)       | NO   |     | NULL    |                |
+| creation_date | date             | NO   |     | NULL    |                |
++---------------+------------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
++----------+------------+---------+---------------+
+| chord_id | chord_name | strings | creation_date |
++----------+------------+---------+---------------+
+|        1 | F          | 003210  | 2015-02-16    |
+|        2 | A maj      | X02220  | 2015-02-16    |
+|        3 | A 7        | X02020  | 2015-02-16    |
+|        4 | A min      | X02210  | 2015-02-16    |
+|        5 | C maj      | X32010  | 2015-02-16    |
+|        6 | C 7        | X32310  | 2015-02-16    |
+|        7 | C min      | X3101X  | 2015-02-16    |
++----------+------------+---------+---------------+
+7 rows in set (0.01 sec)
+
