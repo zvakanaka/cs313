@@ -20,31 +20,23 @@ echo "string5=$string5\n";
 echo "string6=$string6\n";
 
 echo "all_strings=$all_strings\n";
-
 echo "name_of_chord=$name_of_chord\n";
 
-$dbUser = 'php';
-$dbPass = 'php-pass';
-$dbName = 'pluckit';
-$dbHost = '127.0.0.1';
+require 'load_db.php';
+try {
+  $db = loadDB();
 
-try
-{
-	$db = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPass);
+$query = 'INSERT INTO chord(chord_name, strings, creation_date) VALUES(:name_of_chord, :all_strings, UTC_DATE())';
 
-	$db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+$statement = $db->prepare($query);
 
-	$query = 'INSERT INTO chord(chord_name, strings, creation_date) VALUES(:name_of_chord, :all_strings, UTC_DATE())';
-
-	$statement = $db->prepare($query);
-
-	$statement->bindParam(':name_of_chord', $name_of_chord);
-	$statement->bindParam(':all_strings', $all_strings);
-	$statement->execute();
+$statement->bindParam(':name_of_chord', $name_of_chord);
+$statement->bindParam(':all_strings', $all_strings);
+$statement->execute();
 }
 catch (Exception $ex)
 {
-	echo "Error with DB. Details: $ex";
+	echo "Error with DB.";
 	die();
 }
 
