@@ -23,6 +23,7 @@ include '../header.php'
       <a href="guitar/show_chords.php" title="Delete Guitar Chords in Database"> Delete</a>
       <h3>Testing</h3>
       <a href="testing/info.php" title="Could be the upcoming assignment's workspace">Latest Test</a>
+      <a href="class/login_page.php" title="Could be the upcoming assignment's workspace">Password Hashing</a> 
     </article>
     <?php include '../footer.php' ?>
     </div>

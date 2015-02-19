@@ -1,8 +1,8 @@
-<?php  //info.php
+<?php  //login_page.php
 
 
 ?>
-<form id="mainForm" action="authenticate.php" method="POST">
+<form id="mainForm" action="login_authenticate.php" method="POST">
 
 	<input type="username" id="username" name="username"></input>
 	<label for="username">Username</label>
@@ -14,3 +14,4 @@
 
 	<input type="submit" value="Login" />
 	</form>
+	<a href="create_account_form.php" title="Create new account">I don't have an account</a>
