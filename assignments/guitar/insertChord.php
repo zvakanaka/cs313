@@ -12,16 +12,6 @@ $string6 = $_POST['string6'];
 $all_strings = "$string1$string2$string3$string4$string5$string6";
 $name_of_chord = $_POST['chord_name'];
 
-echo "string1=$string1\n";
-echo "string2=$string2\n";
-echo "string3=$string3\n";
-echo "string4=$string4\n";
-echo "string5=$string5\n";
-echo "string6=$string6\n";
-
-echo "all_strings=$all_strings\n";
-echo "name_of_chord=$name_of_chord\n";
-
 require 'load_db.php';
 try {
   $db = loadDB();

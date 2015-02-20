@@ -1,4 +1,5 @@
 <?php
+session_start();
 	$ageErr = $_SESSION["ageErr"];
 	$handErr = $_SESSION["handErr"];
 	$threatErr = $_SESSION["threatErr"];

@@ -7,7 +7,7 @@
 <body>
 <?php
 	include '../../header.php';
-  include 'info.php';
+  include 'draw_chord.php';
   $openShiftVar = getenv('OPENSHIFT_MYSQL_DB_HOST');
   if ($openShiftVar === null || $openShiftVar == "")
   {

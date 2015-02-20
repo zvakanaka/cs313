@@ -16,7 +16,7 @@ include 'header.php'
      <h2>Greetings</h2>
      <article>
        <img src="images/face.jpg" width="165" alt="My face" />
-       <p>My name is Adam Quinton. I'm earning a degree in sofware engineering at Brigham Young University-Idaho. I'm a TA for a CIT database class where I help students learn SQL and MySQL.  My favorite languages to program in are Java, C++, and Bash.  I've been using Linux for about 5 years now and I love using the command line for real world tasks like building web sites and editing videos.</p>
+       <p>My name is Adam Quinton. I'm earning a degree in Software Engineering at Brigham Young University-Idaho. I'm a TA for a CIT database class where I help students learn SQL and MySQL.  My favorite languages to program in are Java, C++, and Bash.  I've been using Linux for about 5 years now and I love using the command line for real world tasks like building web sites and editing videos.</p>
      </article>
      <br /><br />
      <?php include 'footer.php' ?>

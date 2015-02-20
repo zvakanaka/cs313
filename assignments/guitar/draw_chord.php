@@ -39,7 +39,7 @@ function drawChord($one, $two, $three, $four, $five, $six, $outFile) {
     $imagick->setImageFormat("gif");
     $imagick->borderImage('gray', 5, 5);
     $imagick->drawImage($draw);
-    //DONE WITH FRETBOARD
+    //DONE WITH FRETBOARD, drawing circles for fingers
     $radius = 13;
     $draw->setStrokeWidth(1);
     $draw->setFillColor('red');
@@ -54,8 +54,3 @@ function drawChord($one, $two, $three, $four, $five, $six, $outFile) {
    $imagick->writeImage($outFile);
 }
 ?>
-<html>
-<body>
-	<!-- <img src="tab.png" alt="After Image Magicked Picture" title="edited"/> -->
-</body>
-</html>

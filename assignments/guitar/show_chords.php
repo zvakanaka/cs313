@@ -3,11 +3,7 @@
 	include '../../header.php';
 
 //contains chord drawing function
-  include '../guitar/info.php';
-
-//show some dubug
-error_reporting(E_ALL);
-ini_set("display_errors", "On");
+  include 'draw_chord.php';
 
 require 'load_db.php';
 try {
@@ -26,12 +22,12 @@ catch (PDOException $ex)
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../css/tanga.css">
-<title>TEST</title>
+  <title>Chords | Guitar</title>  
 </head>
 <form id="mainForm" action="delete_chord.php" method="POST">
 <?php
 //show_chords.php
-	echo "<h2>All Chords</h2>";
+	echo "<h2>Chords</h2>";
   $chords = 0;
 	foreach ($db->query("SELECT chord_name, strings FROM chord") as $row) {
 		$chords++;

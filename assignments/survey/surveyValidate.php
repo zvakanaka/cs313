@@ -9,10 +9,14 @@ $_SESSION["ageErr"] = $_SESSION["threatErr"] = $_SESSION["handErr"] = $_SESSION[
 <body>
 	<?php
 	include '../../header.php';
-
-	if (!isset($_SESSION["quizTaken"]) || $_SESSION["quizTaken"] == false) {
+if  ($_SESSION["quizTaken"]) {
+} else {
+	$_SESSION["quizTaken"] = FALSE;
+}
+	//Check if have not taken quiz
+	if ($_SESSION["quizTaken"] == FALSE) {
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
+			echo "PROCESSING";
 			if (empty($_POST["age"])) {
 				$_SESSION["ageErr"] = "Must choose age range";
 			} else {
@@ -41,16 +45,15 @@ $_SESSION["ageErr"] = $_SESSION["threatErr"] = $_SESSION["handErr"] = $_SESSION[
 			} else {
 				$climate = ($_POST["climate"]);
 			}
-			if (empty($_POST["comment"])) {
-			} else {
-				$comment = $_POST["comment"];
-			}
 			if ($_SESSION["ageErr"] == "" && $_SESSION["threatErr"] == "" && $_SESSION["handErr"] == "" && $_SESSION["climateErr"] == "") {
+				$_SESSION["quizTaken"] = TRUE;
 				$myfile = fopen("results.txt", "a") or die("Unable to open file!");
-				$_SESSION["quizTaken"] = true;
 				$txt = "age=$age,rhanded=$rhanded,lhanded=$lhanded,climate=$climate,threat=$threat,";
 				fwrite($myfile, $txt);
 				fclose($myfile);
+				//redirect to results page
+				header("Location: surveyProcess.php");
+				die();
 			}
 			else {
 				echo "Form error";
@@ -65,6 +68,7 @@ $_SESSION["ageErr"] = $_SESSION["threatErr"] = $_SESSION["handErr"] = $_SESSION[
 	}
 	include '../../footer.php';
 	?>
-
+	<form id="mainForm" action="reset_session.php" method="POST">
+	   <span style="text-align: right"><input type="submit" class="btn btn-danger" value="Reset Session" /></span></p>	
 </body>
 </html>
