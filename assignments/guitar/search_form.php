@@ -7,7 +7,10 @@
   </head>
   <body>
 <?php
-include '../../header.php'; 
+session_start();
+include $_SERVER['DOCUMENT_ROOT']."/modules/header.php";
+error_reporting(E_ALL);
+ini_set("display_errors", "On");
 ?>
     <div>
     <article>
@@ -42,7 +45,7 @@ include '../../header.php';
   }
 ?>
   <h3>Search</h3>
-   <form action="searchdb.php" method="POST">
+   <form action="search_results.php" method="POST">
    <input type="text" name="pluckit_search_term" />
    <select name="search_type">
    <option value="chord_name">Chord</option>

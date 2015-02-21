@@ -1,6 +1,6 @@
 <?php
 //insertChord.php
-
+require $_SERVER['DOCUMENT_ROOT']."/modules/stranger_go_login.php";
 // get the data from the POST
 $string1 = $_POST['string1'];
 $string2 = $_POST['string2'];

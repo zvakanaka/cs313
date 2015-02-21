@@ -8,7 +8,7 @@
   </head>
   <body>
 <?php
-include '../header.php'
+include $_SERVER['DOCUMENT_ROOT']."/modules/header.php";
 ?>
     <div>
       <h2>Assignments</h2>
@@ -17,15 +17,21 @@ include '../header.php'
       <a href="survey/surveyValidate.php" title="Start taking the survey">Take the Survey</a>
       <a href="survey/surveyProcess.php" title="Reults of Global Warming Survey">Skip to Results</a>
       <h3>Guitar Database</h3>
-      <a href="guitar/database.php" title="Search Guitar Database">Search</a>
+      <a href="guitar/search_form.php" title="Search Guitar Database">Search</a>
       <a href="guitar/show_chords.php" title="Browse Chords in Guitar Database">Browse</a>  
       <a href="guitar/chordEntry.php" title="Create Guitar Chords in Database">Create</a>
       <a href="guitar/show_chords.php" title="Delete Guitar Chords in Database"> Delete</a>
       <h3>Testing</h3>
       <a href="testing/info.php" title="Could be the upcoming assignment's workspace">Latest Test</a>
-      <a href="class/login_page.php" title="Could be the upcoming assignment's workspace">Password Hashing</a> 
+      <a href="class/login_form.php" title="Could be the upcoming assignment's workspace">Password Hashing</a> 
     </article>
-    <?php include '../footer.php' ?>
     </div>
+    <footer>
+    <nav>
+    <?php
+include $_SERVER['DOCUMENT_ROOT']."/modules/footer.php";
+?>
+    </nav>
+    </footer>
 </body>
 </html>

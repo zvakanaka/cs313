@@ -16,13 +16,27 @@ ini_set("display_errors", "On");
 	while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 		if (password_verify($_POST["password"], $row["user_password"])) {
 			$loggedIn = true;
-			$_SESSION["loggedInUser"] = $row["user_name"];
+			$_SESSION["userLoggedIn"] = $row["user_name"];
 		}
 	}
+	?>
+	<html>
+<head>
+	<title>Authenticate | Aquinton</title>
+    <link rel="favorite icon" type="image/x-icon" href="../favicon.ico" />	
+    <link href="/css/tanga.css" type="text/css" rel="stylesheet" media="screen">
+</head>
+<body>
+<?php
 	if ($loggedIn) {
-		echo "logged in as ";
+		echo "logged in as ".$_SESSION["userLoggedIn"].", redirecting...";
+		header( "Refresh:3; url=../index.php", true, 303);
+		die();
 	} else {
-		echo "failed logging in as user ";
+		echo "Username password mismatch, redirecting... ";
+		header( "Refresh:3; url=login_form.php", true, 303);
+		die();
 	}
-	echo $_POST["username"];
 ?>
+</body>
+</html>
