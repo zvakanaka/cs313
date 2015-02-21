@@ -20,7 +20,11 @@ include 'header.php'
   <p>The goal of this page is to teach you to use a terminal.  After years of practice, you can master that command in the image to the left.</p>
 </article>
 <br /><br />
-<?php include 'footer.php' ?>
+<nav>
+  <footer>
+    <?php include 'modules/footer.php' ?>
+  </footer>
+</nav>
 </div>
 </body>
 </html>

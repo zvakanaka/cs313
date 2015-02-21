@@ -10,7 +10,7 @@ float: left;
     width:100px;
     height:20px;
 padding: 0px;
-margin: 0px;
+margin: -15px;
     -webkit-transform:rotate(90deg); /* Safari and Chrome */        
     -moz-transform:rotate(90deg);
     -o-transform:rotate(90deg);

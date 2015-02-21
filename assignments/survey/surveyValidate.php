@@ -68,7 +68,7 @@ if  ($_SESSION["quizTaken"]) {
 	}
 	include '../../footer.php';
 	?>
-	<form id="mainForm" action="reset_session.php" method="POST">
-	   <span style="text-align: right"><input type="submit" class="btn btn-danger" value="Reset Session" /></span></p>	
+	<!-- <form id="mainForm" action="reset_session.php" method="POST">
+	   <span style="text-align: right"><input type="submit" class="btn btn-danger" value="Reset Session" /></span></p> -->
 </body>
 </html>
