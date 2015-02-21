@@ -29,16 +29,16 @@ catch (PDOException $ex)
 //show_chords.php
 	echo "<h2>Chords</h2>";
   $chords = 0;
-	foreach ($db->query("SELECT chord_name, strings FROM chord") as $row) {
+	foreach ($db->query("SELECT chord_name, strings, chord_id FROM chord") as $row) {
 		$chords++;
     echo "<div style=\"float:left\" id=\"chord_box\"><h3 id=\"heading\">".$row['chord_name']."</h3>";
     //turn strings into split number array
     $chars = str_split( $row['strings'], 1 );
     if (!empty($chars)) {
-      //echo "Finger Placement: " .  $row['strings'];
+     //echo "Finger Placement: " .  $row['strings'];
      drawChord($chars[0], $chars[1], $chars[2], $chars[3], $chars[4], $chars[5], "tab{$chords}.gif");
-     echo "<img src=\"tab{$chords}.gif\" style=\"width:100px\" alt=\"After Image Magicked Picture\" title=\"edited\"/>";
-echo "<input type=\"radio\" \"style=float: top\" name=\"deleteRadio\" value=\"".$row['chord_name']."\" />";
+     echo "<img src=\"tab{$chords}.gif\" style=\"width:100px\" alt=\"Chord Representation\" title=\"Chord\"/>";
+     echo "<input type=\"radio\" \"style=float: top\" name=\"deleteRadio\" value=\"".$row['chord_id']."\" />";
    } else {
     echo "<p><span style='color:red'>No Results</span></p>";
   }
