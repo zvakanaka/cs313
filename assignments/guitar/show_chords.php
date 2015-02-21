@@ -19,8 +19,6 @@ catch (PDOException $ex)
 <html>
 <body>
 <head>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../css/tanga.css">
   <title>Chords | Guitar</title>  
 </head>
@@ -45,9 +43,12 @@ catch (PDOException $ex)
   echo "</div>";
 }
 ?>
-<p><span style="text-align: left"><a href="../guitar/chordEntry.php" class="btn btn-primary" title="Chord Creator">Add Chords</a></span>
+<form id="addChord" action="chordEntry.php" method="POST">
+  <span style="text-align: right"><input type="submit" class="btn btn-primary" value="Add Chord" /></span></p>
+  </form>
   <span style="text-align: right"><input type="submit" class="btn btn-danger" value="Delete Chord" /></span></p>
 </form>
+
  <?php include '../../footer.php' ?>
 </body>
 </html>
