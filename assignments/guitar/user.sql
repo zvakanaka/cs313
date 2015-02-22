@@ -43,3 +43,8 @@ INSERT INTO user VALUES
 , 'frank'
 , 'eagle'
 , UTC_DATE());
+
+-- Whenever chord is added, add the user as the created_by
+ALTER TABLE chord ADD column created_by INT UNSIGNED NOT NULL;
+UPDATE chord SET created_by = (SELECT user_id FROM user WHERE user_name = 'quintonish');
+ALTER TABLE chord ADD FOREIGN KEY (created_by) REFERENCES user (user_id);
