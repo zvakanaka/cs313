@@ -11,7 +11,7 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT']."/modules/header.php";
 ?>
-<h1> Login </h1>
+<h1> Login - Gain More Rights! </h1>
 <article>
 <form id="mainForm" action="login_authenticate.php" method="POST">
 	<input type="username" id="username" name="username"></input>

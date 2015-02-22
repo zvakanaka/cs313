@@ -19,22 +19,22 @@
 <br><br><br>
 <form id="mainForm" action="insert_chord_db.php" method="POST">
 	<div style="float: left"> <span>E</span>
-<input type="range" min="0" max="4" value="0" step="1" onchange="showValue1(this.value)" name="string1" />
+<input type="range" min="0" max="5" value="0" step="1" onchange="showValue1(this.value)" name="string1" />
 	<span id="range1">0</span>
 	</div><div style="float: left"> <span>A</span>
-	<input type="range" min="0" max="4" value="0" step="1" onchange="showValue2(this.value)" name="string2" />
+	<input type="range" min="0" max="5" value="0" step="1" onchange="showValue2(this.value)" name="string2" />
 	<span id="range2">0</span>
 		</div>	<div style="float: left"> <span>D</span>
-	<input type="range" min="0" max="4" value="0" step="1" onchange="showValue3(this.value)" name="string3" />
+	<input type="range" min="0" max="5" value="0" step="1" onchange="showValue3(this.value)" name="string3" />
 	<span id="range3">0</span>
 		</div>	<div style="float: left"> <span>G</span>
-	<input type="range" min="0" max="4" value="0" step="1" onchange="showValue4(this.value)" name="string4" />
+	<input type="range" min="0" max="5" value="0" step="1" onchange="showValue4(this.value)" name="string4" />
 	<span id="range4">0</span>
 		</div>	<div style="float: left"> <span>B</span>
-	<input type="range" min="0" max="4" value="0" step="1" onchange="showValue5(this.value)" name="string5" />
+	<input type="range" min="0" max="5" value="0" step="1" onchange="showValue5(this.value)" name="string5" />
 	<span id="range5">0</span>
 		</div>	<div style="float: left"> <span>E</span>
-	<input type="range" min="0" max="4" value="0" step="1" onchange="showValue6(this.value)" name="string6" />
+	<input type="range" min="0" max="5" value="0" step="1" onchange="showValue6(this.value)" name="string6" />
 	<span id="range6">0</span>
 		</div>
 <br>

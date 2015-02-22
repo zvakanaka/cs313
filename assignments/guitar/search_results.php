@@ -3,6 +3,10 @@
 <head>
   <title>Search | Guitar</title>
 	<link href="../../css/tanga.css" type="text/css" rel="stylesheet" media="screen">
+  <?php 
+  session_start();
+  ini_set('display_errors', 'On');
+   ?>
 </head>
 <body>
 <?php
@@ -65,13 +69,7 @@ if (!(strcmp($_POST["pluckit_search_term"], "") == 0)) {
   foreach ($db->query("SELECT song_name, song_composer FROM song WHERE song_composer LIKE '%$term%'") as $row) {
     echo "<h2>" . $row['song_name'] . "</h2>";
     echo "<h3>by " . $row['song_composer'] . "</h3>";
-    echo "<p>Chords: ";
-    foreach ($db->query("SELECT chord_name FROM chord") as $row)
-    {
-     echo $row['chord_name'];
-     echo " ";
-   }
-   echo "</p>";
+    echo "</p>";
  }
 } else if (strcmp($search_type, "chord_name") == 0) {
 	echo "<h2>Chords</h2>";
@@ -87,6 +85,13 @@ if (!(strcmp($_POST["pluckit_search_term"], "") == 0)) {
      echo "<img src=\"tab{$chords}.gif\" style=\"width:100px\" alt=\"After Image Magicked Picture\" title=\"edited\"/>";
    } else {
     echo "<p><span style='color:red'>No Results: try searching for F, A, or C</span></p>";
+  }
+  $user_name = $_SESSION['userLoggedIn'];
+  echo "<p>Chords by $user_name: ";
+  foreach ($db->query("SELECT chord_name from chord where created_by = (select user_id from user where user_name = '$user_name')") as $row)
+  {
+    echo $row['chord_name'];
+    echo " ";
   }
   echo "</div>";
 }

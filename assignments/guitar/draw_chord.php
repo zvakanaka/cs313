@@ -40,13 +40,24 @@ function drawChord($one, $two, $three, $four, $five, $six, $outFile) {
     $imagick->borderImage('gray', 5, 5);
     $imagick->drawImage($draw);
     //DONE WITH FRETBOARD, drawing circles for fingers
+    $lineOffset = 15;
     $radius = 13;
-    $draw->setStrokeWidth(1);
     $draw->setFillColor('red');
     for ($i = 0; $i < 6; $i++) {
         $originX = getChordX($i+1, $border, $fretSpacing);
+
+        //if string[$i] == 5 then draw x where 1 goes
+        if ($strings[$i] == 5) {
+            $draw->setStrokeColor('gray');
+            $originY = getChordY(1, $fretSpacing);
+            $draw->setStrokeWidth(5);
+            $draw->line($originX-$lineOffset+3, $originY-$lineOffset, $originX+$lineOffset-3, $originY+$lineOffset);
+            $draw->line($originX-$lineOffset+3, $originY+$lineOffset, $originX+$lineOffset-3, $originY-$lineOffset);
+        }
+        $draw->setStrokeColor($strokeColor);
+        $draw->setStrokeWidth(1);
         $originY = getChordY($strings[$i], $fretSpacing);
-        if ($strings[$i] > 0) {
+        if ($strings[$i] > 0 && $strings[$i] != 5) {
             $draw->circle($originX, $originY, $originX+$radius, $originY+$radius);
         }
     }
